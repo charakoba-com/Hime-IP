@@ -1,14 +1,14 @@
 # -*- coding:utf-8 -*-
-import urllib2
+import requests
 import tweet
 import os
 
 
-current_ip_val = urllib2.urlopen('http://inet-ip.info/ip').read()
+current_ip_val = requests.get('http://inet-ip.info/ip').text
 ip_file = os.path.join(os.path.dirname(__file__), 'global.ip')
 
 
-with open('ip_file','r') as recorded_ip:
+with open(ip_file,'r') as recorded_ip:
 	recorded_ip_val = recorded_ip.read()
 
 if (current_ip_val != recorded_ip_val):
