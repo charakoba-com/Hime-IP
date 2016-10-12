@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 import requests
 import tweet
+import slack
 import os
 
 
@@ -14,4 +15,5 @@ with open(ip_file,'r') as recorded_ip:
 if (current_ip_val != recorded_ip_val):
 	with open(ip_file,'w') as recorded_ip:
 		recorded_ip.write(current_ip_val)
-	tweet.tweet(current_ip_val)
+	#tweet.tweet(current_ip_val)
+	slack.post(current_ip_val)
