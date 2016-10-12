@@ -18,4 +18,4 @@ def update(current_ip_val):
     records.append(record)
     payload = json.dumps(data)
     
-    res = requests.put(url, auth=(config.GEHIRN_API_KEY,config.GEHIRN_API_SECRET), data=payload)
+    res = requests.put(config.GEHIRN_URL, auth=(config.GEHIRN_API_KEY,config.GEHIRN_API_SECRET), data=payload)
