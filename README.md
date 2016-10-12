@@ -4,7 +4,7 @@ Twitter bot tweets when global ip addrress changes
 ## Requirements
 
 * Twython
-* urllib2
+* requests
 
 ## How to use
 
