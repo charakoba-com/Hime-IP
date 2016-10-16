@@ -19,3 +19,7 @@ def update(current_ip_val):
     payload = json.dumps(data)
     
     res = requests.put(config.GEHIRN_URL, auth=(config.GEHIRN_API_KEY,config.GEHIRN_API_SECRET), data=payload)
+    
+    f = open('gehirn.log', 'w')
+    f.write(payload)
+    f.close()
