@@ -6,7 +6,7 @@ import gehirn
 import os
 
 
-current_ip_val = requests.get('http://ifconfig.moe/').text
+current_ip_val = requests.get('http://ifconfig.moe/').text.strip()
 ip_file = os.path.join(os.path.dirname(__file__), 'global.ip')
 
 
